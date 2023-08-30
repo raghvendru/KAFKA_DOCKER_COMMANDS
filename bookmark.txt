@@ -79,3 +79,4 @@
 </DL><p>
 
 okhttpeventsource maven
+jackson json maven
