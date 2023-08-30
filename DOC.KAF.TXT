@@ -1,0 +1,35 @@
+
+java -jar zipkin-server-2.24.3-exec.jar
+
+#docker commands
+D:\my_proj_2023\springboot-docker-demo>Docker run -p 3307:3306 --name localhost -e MYSQL_DATABASE=employee_db -e MYSQL_USER=root -d mysql:latest
+801a21088a7b919bbe14c392d6831ed3197b29feaea28a2d36d45e16aa43159e
+
+docker run -p 3307:3306 --name mysql-container -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=employee_db -e MYSQL_USER=root -d mysql:latest
+
+docker run -p 3307:3306 --name mysql-container -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=employee_db -d mysql:latest
+
+docker run -rm -it -p 5672:5672 rabbitmq:3.12.0
+
+
+
+
+##apache-kafka commands
+#zookeeper server start(all under kafka)
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+#kafka broker service start
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+#create a topic to store event
+.\bin\windows\kafka-topics.bat --create --topic topic-example --bootstrap-server localhost:9092
+
+#write some event into topic
+.\bin\windows\kafka-console-producer.bat --topic topic-example --bootstrap-server localhost:9092
+
+
+#read events
+.\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
+
+bin/kafka-console-producer.bat --topic quickstart-events --bootstrap-server localhost:9092
+
