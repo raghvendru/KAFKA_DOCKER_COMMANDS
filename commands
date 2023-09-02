@@ -1,5 +1,5 @@
 on windows
-identity pid netstat -ano | findstr :8080
+identity pid -->> netstat -ano | findstr :8080
 kill proc-->  taskkill /F /PID <PID>
 
   linux
